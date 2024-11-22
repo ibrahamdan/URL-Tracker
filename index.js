@@ -5,7 +5,6 @@ const deleteBtn = document.querySelector("#delete-btn")
 const tabBtn = document.querySelector("#tab-btn")
 let ulEl = document.querySelector("#ul-el")
 
-//myLinks.push(localStorage.getItem("savedLinks"))
 const local = JSON.parse(localStorage.getItem("savedLinks"))
 if (local) {
     myLinks = local
@@ -40,7 +39,6 @@ function saveLink() {
 }
 
 function updateUlEl(link) {
-    //ulEl.innerHTML = ulEl.innerHTML + "<li>" + link + "</li"
     const a = document.createElement("a")
     a.setAttribute("href", link)
     a.setAttribute("target", "_blank")
@@ -48,11 +46,6 @@ function updateUlEl(link) {
     const li = document.createElement("li")
     li.append(a)
     ulEl.append(li)
-    /*ulEl.innerHTML += `<li>
-                            <a href="${link}" target="_blank">
-                                ${link}
-                            </a>
-                        </li>`*/
 }
 
 function saveTab() {
