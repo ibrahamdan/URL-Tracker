@@ -35,7 +35,6 @@ function saveLink() {
     }
     inputEl.value = ""
     localStorage.setItem("savedLinks", JSON.stringify(myLinks))
-    console.log(localStorage.getItem("savedLinks"))
 }
 
 function updateUlEl(link) {
